@@ -18,7 +18,7 @@ export function ScoreRank({ className }: { className?: string }): JSX.Element {
               <GamePoster
                 isShowGameName
                 infoStyle={cn('flex-row text-sm gap-3 justify-start items-center pl-3')}
-                fontStyles={{ name: 'text-lg w-[330px]', additionalInfo: 'text-sm' }}
+                fontStyles={{ name: 'text-lg w-8/12', additionalInfo: 'text-sm w-3/12 text-right' }}
                 className={cn('w-full h-[50px]')}
                 key={gameId}
                 gameId={gameId}

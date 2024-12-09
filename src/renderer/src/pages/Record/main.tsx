@@ -78,30 +78,30 @@ export function Record({ className }: { className?: string }): JSX.Element {
               </CardContent>
             </Card>
           </div>
-          <div className={cn('flex flex-row gap-3')}>
-            <Card className={cn('w-1/4')}>
+          <div className={cn('flex flex-row gap-3 h-[34vw]')}>
+            <Card className={cn('w-1/4 h-full flex flex-col')}>
               <CardHeader>
                 <CardTitle>最高评分</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className={cn('grow')}>
                 {maxScoreGame ? (
                   <GamePoster
                     fontStyles={{ name: 'w-[300px] text-center', additionalInfo: '' }}
                     gameId={maxScoreGame}
                     isShowGameName
                     additionalInfo={maxScore == -1 ? '暂无评分' : `${maxScore} 分`}
-                    className={cn('w-full h-[460px]', '3xl:h-[630px]')}
+                    className={cn('w-full h-full')}
                   />
                 ) : (
                   '暂无'
                 )}
               </CardContent>
             </Card>
-            <Card className={cn('w-1/4')}>
+            <Card className={cn('w-1/4 h-full flex flex-col')}>
               <CardHeader>
                 <CardTitle>最长游戏时间</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className={cn('grow')}>
                 {maxPlayingTimeGame ? (
                   <GamePoster
                     fontStyles={{ name: 'w-[300px] text-center', additionalInfo: '' }}
@@ -112,36 +112,36 @@ export function Record({ className }: { className?: string }): JSX.Element {
                         ? '从未游玩'
                         : formatTimeToChinese(maxPlayingTime as number)
                     }
-                    className={cn('w-full h-[460px]', '3xl:h-[630px]')}
+                    className={cn('w-full h-full')}
                   />
                 ) : (
                   '暂无'
                 )}
               </CardContent>
             </Card>
-            <Card className={cn('w-1/4')}>
+            <Card className={cn('w-1/4 h-full flex flex-col')}>
               <CardHeader>
                 <CardTitle>最多游戏次数</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className={cn('grow')}>
                 {maxPlayedTimesGameId ? (
                   <GamePoster
                     fontStyles={{ name: 'w-[300px] text-center', additionalInfo: '' }}
                     gameId={maxPlayedTimesGameId}
                     isShowGameName
                     additionalInfo={maxPlayedTimes == 0 ? '从未游玩' : `${maxPlayedTimes} 次`}
-                    className={cn('w-full h-[460px]', '3xl:h-[630px]')}
+                    className={cn('w-full h-full')}
                   />
                 ) : (
                   '暂无'
                 )}
               </CardContent>
             </Card>
-            <Card className={cn('w-1/4')}>
+            <Card className={cn('w-1/4 h-full flex flex-col')}>
               <CardHeader>
                 <CardTitle>最近运行游戏</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className={cn('grow')}>
                 {maxSoonGame ? (
                   <GamePoster
                     fontStyles={{ name: 'w-[300px] text-center', additionalInfo: '' }}
@@ -150,7 +150,7 @@ export function Record({ className }: { className?: string }): JSX.Element {
                     additionalInfo={
                       maxSoonDate ? formatDateToChinese(maxSoonDate as string) : '从未运行'
                     }
-                    className={cn('w-full h-[460px]', '3xl:h-[630px]')}
+                    className={cn('w-full h-full')}
                   />
                 ) : (
                   '暂无'
