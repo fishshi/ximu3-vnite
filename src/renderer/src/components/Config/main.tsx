@@ -14,7 +14,9 @@ export function ConfigDialog({ children }: { children: React.ReactNode }): JSX.E
   return (
     <Dialog>
       <DialogTrigger className={cn('w-full')}>{children}</DialogTrigger>
-      <DialogContent className={cn('w-[1000px] h-[730px] max-w-none flex flex-col')}>
+      <DialogContent
+        className={cn('max-w-[1000px] max-h-[730px] w-[62.5vw] h-[81.1vh] flex flex-col')}
+      >
         <DialogHeader>
           <DialogTitle>{`Vnite 设置`}</DialogTitle>
         </DialogHeader>

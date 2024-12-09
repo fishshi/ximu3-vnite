@@ -16,7 +16,9 @@ export function AttributesDialog({
   const [gameName] = useDBSyncedState('', `games/${gameId}/metadata.json`, ['name'])
   return (
     <Dialog open={true} onOpenChange={(state) => setIsOpen(state)}>
-      <DialogContent className={cn('w-[1000px] h-[700px] max-w-none flex flex-col')}>
+      <DialogContent
+        className={cn('max-w-[1000px] max-h-[700px] w-[62.5vw] h-[77.8vh] flex flex-col')}
+      >
         <DialogHeader>
           <DialogTitle>{`${gameName} - 属性`}</DialogTitle>
         </DialogHeader>

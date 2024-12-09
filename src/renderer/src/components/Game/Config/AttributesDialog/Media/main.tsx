@@ -108,7 +108,11 @@ export function Media({ gameId }: { gameId: string }): JSX.Element {
               </div>
               <div className={cn('self-center')}>
                 {icon ? (
-                  <img src={icon} alt="icon" className={cn('w-16 h-16 object-cover')} />
+                  <img
+                    src={icon}
+                    alt="icon"
+                    className={cn('max-w-16 max-h-16 w-[5vh] h-[5vh] object-cover')}
+                  />
                 ) : (
                   <div>暂无图标</div>
                 )}
@@ -149,7 +153,7 @@ export function Media({ gameId }: { gameId: string }): JSX.Element {
                   <img
                     src={background}
                     alt="background"
-                    className={cn('w-[500px] h-[264px] object-cover')}
+                    className={cn('w-full max-h-[260px] h-[23vh] object-cover')}
                   />
                 ) : (
                   <div>暂无背景</div>
@@ -190,7 +194,11 @@ export function Media({ gameId }: { gameId: string }): JSX.Element {
               </div>
               <div className={cn('self-center')}>
                 {cover ? (
-                  <img src={cover} alt="cover" className={cn('w-[300px] h-[458px] object-cover')} />
+                  <img
+                    src={cover}
+                    alt="cover"
+                    className={cn('w-full max-h-[458px] h-[46vh] object-cover')}
+                  />
                 ) : (
                   <div>暂无封面</div>
                 )}
