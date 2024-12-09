@@ -26,8 +26,8 @@ export function Game({ gameId }: { gameId: string }): JSX.Element {
             <div
               className={cn(
                 background
-                  ? 'relative bg-background h-[calc(100vh-64px)]'
-                  : 'relative bg-background h-[calc(100-64pxvh)]'
+                  ? 'relative bg-background min-h-[calc(100vh-64px)]'
+                  : 'relative bg-background min-h-[calc(100-64pxvh)]'
               )}
             >
               <Header gameId={gameId} className={cn('-top-16 left-0 right-0')} />

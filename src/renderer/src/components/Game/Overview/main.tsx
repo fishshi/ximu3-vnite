@@ -17,11 +17,11 @@ export function Overview({ gameId }: { gameId: string }): JSX.Element {
           )}
         >
           <Description gameId={gameId} className={cn('grow')} />
-          <Tags gameId={gameId} />
+          <Tags gameId={gameId} className={cn('mb-5', '3xl:mb-7')} />
         </div>
-        <div className={cn('flex flex-col gap-5 grow', '3xl:gap-7')}>
+        <div className={cn('flex flex-col gap-5 grow w-0', '3xl:gap-7')}>
           <Information gameId={gameId} />
-          <RelatedSites gameId={gameId} />
+          <RelatedSites gameId={gameId} className={cn('mb-5', '3xl:mb-7')} />
         </div>
       </div>
     </div>
